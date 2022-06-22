@@ -163,7 +163,7 @@ airflow_defaults_config:
 
   webserver:
     auth_backends: ''
-    authenticate: true
+    authenticate: false
     base_url: 'http://localhost:8080'
     debug: false
     expose_config: true
