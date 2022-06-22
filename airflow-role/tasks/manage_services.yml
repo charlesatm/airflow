@@ -25,12 +25,11 @@
   notify: "{{ item.handler }}"
   register: airflow_systemd_updated
   with_items: "{{ airflow_services_systemd }}"
-  when: "is_systemd_managed_system | bool"
 
 - name: 'SERVICE | systemd daemon-reload'
   systemd:
     daemon_reload: true
-  when: "(is_systemd_managed_system | bool) and (airflow_systemd_updated.changed | bool)"
+  when: "(airflow_systemd_updated.changed | bool)"
 
 
 # Services states

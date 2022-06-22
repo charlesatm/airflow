@@ -48,6 +48,7 @@ airflow_packages:
     version: '2.3.0'
   - name: 'pipenv'
   - name: 'numpy'
+  - name: 'authlib'
 airflow_extra_packages:
   - name: 'apache-airflow[crypto]'
 
@@ -278,4 +279,6 @@ airflow_logrotate_config:
 
 airflow_dag_system_dependencies:
   - name: "build-essential"
+    state: "present"
+  - name: "@Development Tools"
     state: "present"
