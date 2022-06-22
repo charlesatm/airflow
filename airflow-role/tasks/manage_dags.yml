@@ -1,0 +1,8 @@
+---
+
+# Manage DAGs system dependencies
+- name: 'INSTALL | Manage DAG system dependencies'
+  package:
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+  with_items: "{{ airflow_dag_system_dependencies }}"
