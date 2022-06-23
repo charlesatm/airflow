@@ -20,6 +20,13 @@
     - 'role::airflow'
     - 'role::airflow::install'
 
+# Installation tasks management
+- name: 'INSTALL | Include DB installation tasks'
+  import_tasks: "manage_db.yml"
+  tags:
+    - 'role::airflow'
+    - 'role::airflow::install'
+
 # Sqlite installation tasks management
 - name: 'INSTALL | Include sqlite installation tasks'
   import_tasks: "manage_sqlite_install.yml"

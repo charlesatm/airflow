@@ -1,0 +1,6 @@
+# Install Python
+- name: 'INSTALL | mysql DB'
+  include_role:
+    name: ansible-role-mysql
+  tags:
+    - mysql

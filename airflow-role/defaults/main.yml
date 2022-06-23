@@ -45,7 +45,7 @@ airflow_packages:
   - name: 'GitPython'
   - name: 'Cython'
   - name: 'apache-airflow'
-    version: '2.3.0'
+    version: '2.3.2'
   - name: 'pipenv'
   - name: 'numpy'
   - name: 'authlib'
@@ -143,11 +143,12 @@ airflow_defaults_config:
     dags_are_paused_at_creation: true
     non_pooled_task_slot_count: 128
     max_active_runs_per_dag: 16
-    load_examples: false
+    load_examples: true
     plugins_folder: "{{ airflow_user_home_path ~ '/airflow/plugins' }}"
     airflow_fernet_key: 'cryptography_not_found_storing_passwords_in_plain_text'
     donot_pickle: false
     dagbag_import_timeout: 30
+    default_timezone : aest
 
   logging:
     remote_base_log_folder: ''
