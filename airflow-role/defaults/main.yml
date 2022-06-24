@@ -148,7 +148,7 @@ airflow_defaults_config:
     airflow_fernet_key: 'cryptography_not_found_storing_passwords_in_plain_text'
     donot_pickle: false
     dagbag_import_timeout: 30
-    default_timezone : aest
+    default_timezone : cet
 
   logging:
     remote_base_log_folder: ''
@@ -180,6 +180,7 @@ airflow_defaults_config:
     workers: 1
     worker_class: 'sync'
     worker_timeout: 30
+    default_ui_timezone: CET
 
   email:
     email_backend: 'airflow.utils.email.send_email_smtp'
